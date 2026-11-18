@@ -1,32 +1,31 @@
-# React + TypeScript + Vite
+# WB Users App (Тестовое задание)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+SPA-приложение для управления пользователями, разработанное в рамках тестового задания. 
+Приложение взаимодействует с фейковым REST API (mockapi.io) и реализует полный CRUD-цикл.
 
-Currently, two official plugins are available:
+## 🚀 Функционал
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Страница списка пользователей:**
+  - Отображение данных в таблице (аватар, имя, email, роль).
+  - Серверная пагинация (переключение страниц).
+  - Модальное окно для создания нового пользователя.
+  - Модальное окно для редактирования существующего пользователя.
+- **Страница деталей пользователя:**
+  - Переход по клику на строку таблицы.
+  - Отображение подробной информации (дата создания, роль, контакты).
+- **Обработка ошибок:**
+  - Валидация ответов от сервера, вывод уведомлений (Alert) в UI при сбоях сети или неверных запросах.
 
-## React Compiler
+## 🛠️ Стек технологий
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** (Vite) + **TypeScript**
+- **Redux Toolkit** + **Redux Thunk** (управление состоянием, асинхронные запросы)
+- **React Router DOM** (навигация)
+- **Axios** (работа с API)
+- **Material UI** (компоненты интерфейса: таблицы, модалки, поля ввода)
 
-## Expanding the Oxlint configuration
+## 📦 Как запустить локально
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+1. Клонируйте репозиторий:
+   ```bash
+   git clone https://github.com/ВАШ_ЛОГИН/wb-users-test.git
